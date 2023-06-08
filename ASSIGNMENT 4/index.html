@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width". initial-scale="1.0">
+        <title>Revo U</title>
+        <link rel="stylesheet" href="css/index.css">
+    <style>
+        @media only screen and (max-width: 600px){
+         .header-wrapper {
+            flex-direction: column;
+         }
+         .nav-bar {
+            width: 100%;
+            flex-direction: column;
+         }
+
+         .logo {
+            margin-bottom: 14px;
+         }
+        }
+    </style>
+    </head>
+    
+    <body class="body">
+        <header class="header-wrapper">
+            <img src="img/logo.png" alt="revoU logo" class="logo">
+            <div class="nav-bar">
+                <button class="nav-item">Home</button>
+                <button class="nav-items"><a href="profile.html">Our Profile</a></button>
+                <button class="nav-item">Portfolio</button>
+                <button class="nav-item">Message Us</button>
+            </div>
+        </header>
+
+        <hr>
+
+        <div class="sayhi">
+        <h1>Hi <span id="nama">Yuri</span>, Welcome to Website!</h1>
+        <script>
+            var name = prompt ("Masukan nama kamu");
+            document.getElementById("nama").innerText = name;
+        </script>
+        </div>
+
+        <h2>Ini adalah website latihan pertama</h2>
+        <div id="hero-section" class="hero">
+            <img class="slideshow" src="img/slide1.jpg" alt="hero image"/>
+            <img class="slideshow" src="img/slide2.jpg" alt="hero image"/>
+            <img class="slideshow" src="img/slide3.jpg" alt="hero image"/>
+            <img class="slideshow" src="img/slide4.jpg" alt="hero image"/>
+            <button onclick="plusDivs(-1)">Previous</button>
+            <button onclick="plusDivs(1)">Next</button>
+        </div>
+        
+        <script>
+            let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slideshow");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+
+        <hr>
+        
+        <div id="headquarters-section">
+        <h1>Headquarters</h1>
+        <div class="wrapper">
+                <div class="headquarters-image-container">
+                <div><img src="img/Jakarta_icon-01.png" class="headquarters-image"></div>
+                <p>Jakarta</p> </div>
+                <div class="headquarters-image-container">
+                <div><img src="img/bandung_icon-01.png" class="headquarters-image"></div>
+                <p>Bandung</p> </div>
+                <div class="headquarters-image-container">
+                <div ><img src="img/surabaya_icon-01.png" class="headquarters-image"></div>
+                <p>Surabaya</p></div>
+        </div>        
+        </div>
+        
+        <hr>
+     
+        <h1>Message Us</h1>
+    <div class="form-all">    
+            <form name="message-form" onsubmit="return validateForm()" class="message-form-square">
+             
+               Nama     : <input placeholder="Nama" type="text" name="full-name" />
+             <br />
+
+             Tanggal lahir:
+             <input type="date" name="birth-date" />
+             <br />
+
+             Jenis Kelamin:
+             <input type="radio" id="male" name="gender" value="Laki-laki" />
+             <label for="male">Laki-laki</label>
+             <input type="radio" id="female" name="gender" value="Perempuan" />
+             <label for="female">Perempuan</label>
+             <br />
+
+             Pesan:
+             <textarea placeholder="Pesan" name="messages"></textarea>
+             <br />
+
+             <input type="submit" value="Submit" />
+             </form>
+
+             <script>
+                function validateForm() {
+                var name = document.forms["message-form"]["full-name"].value;
+                var date = document.forms["message-form"]["birth-date"].value;
+                var gender = document.forms["message-form"]["gender"].value;
+                var messages = document.forms["message-form"]["messages"].value;
+                
+                if (name == "" ) {
+                    alert("Input tidak boleh kosong");
+                    return false;
+                }
+
+                document.getElementById("sender-full-name").innerText = name;
+                document.getElementById("sender-birth-date").innerText = date;
+                document.getElementById("sender-gender").innerText = gender;
+                document.getElementById("sender-messages").innerText = messages;
+                return false;
+                }
+             </script>
+
+        <div class="form-output">
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+            <p>Pesan: <span id="sender-messages"></span></p>
+        </div>
+    </div>
+       
+        <hr>
+
+        <footer style="text-align: right;">Created by Yuri Andarini</footer>
+
+    </body>
+</html>

@@ -1,0 +1,121 @@
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3px;
+}
+
+.sayhi {
+    padding-top: 10px;
+}
+
+.logo {
+    height: 3em;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar {
+    display: flex;
+    float: right;
+padding-bottom: 50px;
+ 
+  
+}
+
+.nav-item {
+    padding: 5px 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    align-items: center;
+   
+    
+}
+
+.nav-items {
+    padding: 5px 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    align-items: center;
+    
+    
+}
+
+.nav-items:hover {
+    background: lightblue;
+    margin-top: -3px;
+}
+
+.nav-bar:last-child {
+    border-right: none;
+}
+
+.hero {
+    padding-bottom: 25px;
+}
+
+.slideshow {
+    opacity:1;
+    transition: opacity 1s; 
+}
+
+.slideshow.fadeOut {
+    opacity:0;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.headquarters-image{
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+}
+
+.headquarters-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.body {
+  padding-left:50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.message-us {
+padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3px;
+    
+}
+
+.form-output {
+    display: block;
+  width:400px;
+  height:150px;
+  border: 1px solid black;
+}
+
